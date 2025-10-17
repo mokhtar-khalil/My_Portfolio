@@ -35,7 +35,7 @@ PROJETS = [
         'technologies': ['Python', 'Jupyter Notebook', 'Deep Learning'],
         'github': 'https://github.com/mokhtar-khalil/High_dimensional_deep_learning_projects',
         'demo': '#',
-        'image': 'high_dim_dl.jpg',
+        'image': 'hddl.png',
         'details': """Le projet comprend quatre notebooks distincts :
         - Projet CNN : réseau convolutif pour classification d’images haute dimension.
         - Projet SSL : apprentissage semi-supervisé pour tirer parti de données partiellement étiquetées.
@@ -48,6 +48,7 @@ PROJETS = [
     'description': 'Système intelligent de recommandation et classification de films basé sur les affiches et les descriptions, intégrant CNN, MobileNet, ViT, TF-IDF, GloVe et BERT.',
     'technologies': ['Python', 'FastAPI', 'Gradio', 'Docker', 'TF-IDF', 'GloVe', 'BERT', 'MobileNet', 'ViT', 'Annoy'],
     'github': 'https://github.com/mokhtar-khalil/Movie_Recommender_System',
+    'image': 'movie_recommender.png',
     'demo': '#',
     'details': """Ce projet comprend :
     - Classification des affiches de films par genre avec un modèle CNN.
@@ -63,6 +64,7 @@ PROJETS = [
     'description': 'Application du Reinforcement Learning pour le contrôle d’un écoulement autour d’un cylindre en 2D.',
     'technologies': ['Python', 'FEniCS', 'NumPy', 'Matplotlib', 'Reinforcement Learning'],
     'github': 'https://github.com/mokhtar-khalil/Reinforcement_learning_fluids_dynamics',
+    'image': 'rl_fluid_dynamics.png',
     'demo': '#',
     'details': """Le projet implémente un environnement de simulation d’écoulement 2D autour d’un cylindre 
     (Env2DCylinder) utilisant FEniCS pour la résolution numérique des équations de Navier–Stokes. 
@@ -77,6 +79,7 @@ PROJETS = [
     'description': 'Simulation de trading développée entièrement par des agents d’ingénierie autonomes utilisant l’architecture CrewAI.',
     'technologies': ['Python', 'Gradio', 'CrewAI', 'uv'],
     'github': 'https://github.com/mokhtar-khalil/Trading_simulation_Agent',
+    'image': 'trading_simulation.jpg',
     'demo': '#',
     'details': """Le projet met en œuvre une simulation de trading conçue par une équipe d’agents IA autonomes :
     - Lead Engineer Agent : définit l’architecture et coordonne le travail.
@@ -92,6 +95,7 @@ PROJETS = [
     'description': 'Analyse des données de stations Vélib sur une semaine pour détecter des profils d’utilisation et prédire le taux de remplissage des stations.',
     'technologies': ['Python', 'R', 'Pandas', 'NumPy', 'Matplotlib', 'PCA', 'Clustering'],
     'github': 'https://github.com/mokhtar-khalil/Velib-data-analysis',
+    'image': 'velib_analysis.jpg',
     'demo': '#',
     'details': """Le projet étudie les profils de chargement des stations Vélib sur la semaine du 2 au 7 septembre 2014.
     - Les individus sont les stations, et les variables représentent les 168 heures de la semaine.
@@ -146,7 +150,7 @@ EDUCATION = [
         'diplome': 'Ingénieur en Statistiques et Ingénierie des Données',
         'ecole': 'Ecole Supérieure Polytechnique de Nouakchott (ESP)',
         'annee': '2023',
-        'details': 'Mention Très Bien'
+        'details': 'Mention Très Bien - Major de promotion'
     }
 ]
 

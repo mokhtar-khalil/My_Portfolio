@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}Contact — {{ profil.nom }}{% endblock %}
+
+{% block content %}
+<div class="hero" style="padding: 4rem 2rem;">
+    <div class="hero-content">
+        <h1>Me Contacter</h1>
+        <p>Je suis toujours ouvert à discuter de projets, collaborations ou opportunités.</p>
+    </div>
+</div>
+
+<section class="section" style="background: white;">
+    <div class="container" style="max-width: 600px; margin: auto;">
+        <div class="card" style="text-align: center;">
+            <h2>Informations de Contact</h2>
+            <p><strong>Email :</strong> <a href="mailto:{{ profil.email }}">{{ profil.email }}</a></p>
+            <p><strong>LinkedIn :</strong> <a href="{{ profil.linkedin }}" target="_blank"> Mon profil LinkedIn </a></p>
+            <p><strong>Numéro de téléphone :</strong> 07 82 86 20 46</p>
+
+        </div>
+    </div>
+</section>
+{% endblock %}

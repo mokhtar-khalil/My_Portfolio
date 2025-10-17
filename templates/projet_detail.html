@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}{{ projet.titre }} — {{ profil.nom }}{% endblock %}
+
+{% block content %}
+<div class="hero" style="padding: 4rem 2rem;">
+    <div class="hero-content">
+        <h1>{{ projet.titre }}</h1>
+        <p>{{ projet.description }}</p>
+    </div>
+</div>
+
+<section class="section">
+    <div class="container">
+        <div class="grid grid-2" style="align-items: start;">
+            <div class="card">
+                <h2>Détails du projet</h2>
+                <p>{{ projet.details }}</p>
+                <h3>Technologies utilisées</h3>
+                <div class="tech-tags">
+                    {% for tech in projet.technologies %}
+                    <span class="tech-tag">{{ tech }}</span>
+                    {% endfor %}
+                </div>
+                <div class="project-links" style="margin-top: 1.5rem;">
+                    <a href="{{ projet.github }}" class="github" target="_blank">Voir le code</a>
+                    {% if projet.demo and projet.demo != "#" %}
+                    <a href="{{ projet.demo }}" class="demo" target="_blank">Voir la démo</a>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="card">
+                {% if projet.image %}
+                <img src="{{ url_for('static', filename='images/' ~ projet.image) }}"
+                     alt="Image du projet {{ projet.titre }}" style="width: 100%; border-radius: 8px; object-fit: cover;">
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

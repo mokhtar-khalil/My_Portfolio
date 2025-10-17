@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}À propos — {{ profil.nom }}{% endblock %}
+
+{% block content %}
+<div class="hero" style="padding: 4rem 2rem;">
+    <div class="hero-content">
+        <h1>À propos de moi</h1>
+        <p>{{ profil.bio }}</p>
+    </div>
+</div>
+
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">Expérience</h2>
+        <div class="grid grid-2">
+            {% for exp in experience %}
+            <div class="card">
+                <h3>{{ exp.poste }} — {{ exp.entreprise }}</h3>
+                <small>{{ exp.periode }}</small>
+                <ul style="margin-top: 0.8rem;">
+                    {% for desc in exp.description %}
+                    <li>{{ desc }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="section" style="background: white;">
+    <div class="container">
+        <h2 class="section-title">Formation</h2>
+        <div class="grid grid-2">
+            {% for edu in education %}
+            <div class="card">
+                <h3>{{ edu.diplome }}</h3>
+                <small>{{ edu.ecole }} — {{ edu.annee }}</small>
+                <p style="margin-top: 0.6rem;">{{ edu.details }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">Certifications</h2>
+        <div class="card">
+            <ul>
+                {% for certif in certifications %}
+                <li>{{ certif }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</section>
+{% endblock %}

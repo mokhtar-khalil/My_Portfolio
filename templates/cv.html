@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+
+{% block title %}CV — {{ profil.nom }}{% endblock %}
+
+{% block content %}
+<div class="hero" style="padding: 4rem 2rem;">
+    <div class="hero-content">
+        <h1>Mon CV</h1>
+        <p>Téléchargez la version en français ou en anglais :</p>
+        <div class="hero-buttons">
+            <a href="{{ url_for('static', filename='CV_FR.pdf') }}" class="btn btn-primary" target="_blank">CV Français</a>
+            <a href="{{ url_for('static', filename='CV_EN.pdf') }}" class="btn btn-outline" target="_blank">CV Anglais</a>
+        </div>
+    </div>
+</div>
+
+
+<section class="section" style="background: white;">
+    <div class="container">
+        <h2 class="section-title">Profil</h2>
+        <div class="card">
+            <p>{{ profil.bio }}</p>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">Compétences</h2>
+        <div class="skills-grid">
+            {% for categorie, skills in competences.items() %}
+            <div class="skill-category card">
+                <h3>{{ categorie }}</h3>
+                <div>
+                    {% for skill in skills %}
+                    <span class="skill-tag">{{ skill }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="section" style="background: white;">
+    <div class="container">
+        <h2 class="section-title">Expérience Professionnelle</h2>
+        <div class="grid grid-2">
+            {% for exp in experience %}
+            <div class="card">
+                <h3>{{ exp.poste }} — {{ exp.entreprise }}</h3>
+                <small>{{ exp.periode }}</small>
+                <ul style="margin-top: 0.8rem;">
+                    {% for desc in exp.description %}
+                    <li>{{ desc }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">Formation & Certifications</h2>
+        <div class="grid grid-2">
+            <div class="card">
+                <h3>Formation</h3>
+                <ul>
+                    {% for edu in education %}
+                    <li>
+                        <strong>{{ edu.diplome }}</strong>, {{ edu.ecole }} ({{ edu.annee }})<br>
+                        <small>{{ edu.details }}</small>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="card">
+                <h3>Certifications</h3>
+                <ul>
+                    {% for certif in certifications %}
+                    <li>{{ certif }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
